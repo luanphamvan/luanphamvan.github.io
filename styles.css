@@ -91,30 +91,33 @@ form input{
     display: block;
     box-sizing: border-box;
     font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 form label {
     font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 form textarea {
-    font-size: 16px;
+    font-size: 18px;
     width: 100%;
+    font-family: "Times New Roman", Times, serif;
 }
 
-form textarea:focus {
+/* form textarea:focus {
     outline: none;
     border-bottom: 3px solid #88236f;
     padding-bottom: 8px;
     transition: all ease 0.2s;
-}
+} */
 
-form input:focus{
+/* form input:focus{
     outline: none;
     border-bottom: 3px solid #88236f;
     padding-bottom: 8px;
     transition: all ease 0.2s;
-}
+} */
 
 form:after{
     content: '';
@@ -155,6 +158,7 @@ button{
 
 .category-row label {
     min-width: 160px;
+    font-weight: 500;
 }
 
 .checkbox {
