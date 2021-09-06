@@ -56,7 +56,8 @@ form.addEventListener("submit", (e) => {
     id.length === 0 ||
     name.length === 0 ||
     desc.length === 0 ||
-    author.length === 0
+    author.length === 0 || 
+    categories.length === 0
   ) {
     alert("Để thêm mới bạn cần điền đầy đủ các trường dữ liệu");
     return;
@@ -65,10 +66,10 @@ form.addEventListener("submit", (e) => {
   
 
   db.collection("sachngontinh").doc(id).set({
-    id: id,
-    name: name,
-    author: author,
-    desc: desc,
+    id: id.trim(),
+    name: name.trim(),
+    author: author.trim(),
+    desc: desc.trim(),
     categories: categories,
   }).then( () => {
     alert("Thêm mới sách thành công");
