@@ -37,6 +37,21 @@ form.addEventListener("submit", (e) => {
   let author = form.fauthor.value;
   let desc = form.fdesc.value;
 
+  var categories = [];
+  var checkboxs = document.getElementsByName('category');
+  for (var i = 0; i < checkboxs.length; i++){
+    if (checkboxs[i].checked === true){
+        categories.push(checkboxs[i].value);
+    }
+  }
+
+  console.log(id);
+  console.log(name);
+  console.log(author);
+  console.log(desc);
+  console.log(categories);
+
+  
   if (
     id.length === 0 ||
     name.length === 0 ||
@@ -47,26 +62,28 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  console.log(id);
-  console.log(name);
-  console.log(author);
-  console.log(desc);
+  
 
   db.collection("sachngontinh").doc(id).set({
     id: id,
     name: name,
     author: author,
     desc: desc,
+    categories: categories,
   }).then( () => {
     alert("Thêm mới sách thành công");
   }).catch((error) => {
     console.log(error)
   })
 
-  form.id.value = "";
-  form.name.value = "";
+  form.fid.value = "";
+  form.fname.value = "";
   form.fauthor.value = "";
   form.fdesc.value = "";
+
+  for (var i = 0; i < checkboxs.length; i++){
+    checkboxs[i].checked = false;
+  }
 });
 
 // real-time listener
