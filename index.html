@@ -1,7 +1,93 @@
-<!DOCTYPE html>
 <html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="content">
+
+        <form id="add-story-form">
+            <div class="form-row">
+                <label for="fid">ID</label>
+                <input type="text" id="fid" name="fid" value="">
+            </div>
+
+            <div class="form-row">
+                <label for="fname">Tên truyện</label>
+                <input type="text" id="fname" name="fname" value="">
+            </div>
+
+            <div class="form-row">
+                <label for="fauthor">Tác giả</label>
+                <input type="text" id="fauthor" name="fauthor" value="">
+            </div>
+
+            <div class="form-row">
+                <label for="fauthor">Thể loại</label>
+                <div class="category"> 
+                    <div class="category-row">
+                        <label for="vehicle1"> Hiện Đại</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>                   
+                    
+                    <div class="category-row">
+                        <label for="vehicle1"> Cổ Trang</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>   
+
+                    <div class="category-row">
+                        <label for="vehicle1"> Xuyên Không</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>   
+                    
+                    <div class="category-row">
+                        <label for="vehicle1"> Trọng Sinh</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>
+                </div>
+
+                <div class="category"> 
+                    <div class="category-row">
+                        <label for="vehicle1"> Hiện Đại</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>                   
+                    
+                    <div class="category-row">
+                        <label for="vehicle1"> Cổ Trang</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>   
+
+                    <div class="category-row">
+                        <label for="vehicle1"> Xuyên Không</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>   
+                    
+                    <div class="category-row">
+                        <label for="vehicle1"> Trọng Sinh</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class="checkbox">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="fdesc">Mô tả</label>
+                <textarea id="fdesc" name="fdesc" rows="8" cols="70">
+                </textarea>
+            </div>
+
+            <button>SAVE</button>
+        </form>
+
+        <!-- <ul id="cafe-list"></ul> -->
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
