@@ -146,14 +146,27 @@ button{
     flex-direction: column;
     padding-left: 20px;
     border-radius: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
+
+.category_main {
+    background-color: #eab0dc;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
 .category-row{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px
+    padding-top: 5px;
+    padding-bottom: 5px
 }
 
 .category-row label {
@@ -168,5 +181,13 @@ button{
 }
 
 input[type=checkbox] {
-    transform: scale(1.3);
+    transform: scale(1.2);
+}
+
+#theloais {
+    height: 30px;
+    font-size: 500;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

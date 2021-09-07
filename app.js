@@ -26,6 +26,7 @@ firebase
 const cafeList = document.querySelector("#cafe-list");
 const form = document.querySelector("#add-story-form");
 
+
 // saving data
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -37,24 +38,37 @@ form.addEventListener("submit", (e) => {
   let author = form.fauthor.value;
   let desc = form.fdesc.value;
 
+  const selectbox = document.querySelector('#theloais')
+  let selectedvalue = selectbox.value;
+
   var categories = [];
   var checkboxs = document.getElementsByName('category');
+
+  if (selectedvalue.length > 0) {
+    categories.push(selectedvalue);
+  }
+
   for (var i = 0; i < checkboxs.length; i++){
-    if (checkboxs[i].checked === true){
+    if (checkboxs[i].checked === true && !categories.includes(checkboxs[i].value)){
         categories.push(checkboxs[i].value);
     }
   }
 
+  
+
   console.log(id);
   console.log(name);
   console.log(author);
-  console.log(desc);
+  console.log(desc.trim());
+  console.log(selectedvalue);
   console.log(categories);
+  
 
   
   if (
     id.length === 0 ||
     name.length === 0 ||
+    selectedvalue.length === 0 ||
     desc.length === 0 ||
     author.length === 0 || 
     categories.length === 0
@@ -65,7 +79,7 @@ form.addEventListener("submit", (e) => {
 
   let intId = parseInt(id);
 
-  if (isNaN(id) || id == undefined) {
+  if (isNaN(intId) || intId == undefined) {
     alert("Dữ liệu ID phải là một số nguyên dương");
     return;
   }
@@ -75,6 +89,7 @@ form.addEventListener("submit", (e) => {
     name: name.trim(),
     author: author.trim(),
     desc: desc.trim(),
+    mainCategory: categories[0],
     categories: categories,
   }).then( () => {
     alert("Thêm mới sách thành công");

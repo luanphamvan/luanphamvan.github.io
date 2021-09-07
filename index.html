@@ -24,6 +24,20 @@
 
         <div class="form-row">
           <label for="fauthor">Thể loại</label>
+
+          <div class="category_main">
+            <label for="theloais">Thể loại Chính</label>
+            <br/>
+            <select name="theloais" id="theloais">
+                <option value="hiendai">Hiện Đại</option>
+                <option value="codai">Cổ Đại</option>
+                <option value="huyenhuyen">Huyền Huyễn</option>
+                <option value="trongsinh">Trọng Sinh</option>
+                <option value="xuyenkhong">Xuyên Không</option>
+            </select>
+          </div>
+
+          
           <div class="category">
             <div class="category-row">
               <label for="vehicle1"> Hiện Đại</label>
@@ -46,19 +60,20 @@
                 class="checkbox"
               />
             </div>
+            <div class="category-row">
+                <label for="vehicle1"> Huyền Huyễn</label>
+                <input
+                  type="checkbox"
+                  id="chhuyenhuyen"
+                  name="category"
+                  value="huyenhuyen"
+                  class="checkbox"
+                />
+              </div>
           </div>
 
           <div class="category">
-            <div class="category-row">
-              <label for="vehicle1"> Huyền Huyễn</label>
-              <input
-                type="checkbox"
-                id="chhuyenhuyen"
-                name="category"
-                value="huyenhuyen"
-                class="checkbox"
-              />
-            </div>
+            
             <div class="category-row">
               <label for="vehicle1"> Trọng Sinh</label>
               <input
@@ -69,20 +84,20 @@
                 class="checkbox"
               />
             </div>
+
+            <div class="category-row">
+                <label for="vehicle1"> Xuyên Không</label>
+                <input
+                  type="checkbox"
+                  id="chxuyenkhong"
+                  name="category"
+                  value="xuyenkhong"
+                  class="checkbox"
+                />
+              </div>
           </div>
 
-          <div class="category">
-            <div class="category-row">
-              <label for="vehicle1"> Xuyên Không</label>
-              <input
-                type="checkbox"
-                id="chxuyenkhong"
-                name="category"
-                value="xuyenkhong"
-                class="checkbox"
-              />
-            </div>
-          </div>
+          
         </div>
 
         <div class="form-row">
