@@ -63,10 +63,15 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  
+  let intId = parseInt(id);
+
+  if (isNaN(id) || id == undefined) {
+    alert("Dữ liệu ID phải là một số nguyên dương");
+    return;
+  }
 
   db.collection("sachngontinh").doc(id).set({
-    id: id.trim(),
+    id:  parseInt(id.trim()),
     name: name.trim(),
     author: author.trim(),
     desc: desc.trim(),
