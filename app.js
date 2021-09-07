@@ -91,6 +91,7 @@ form.addEventListener("submit", (e) => {
     desc: desc.trim(),
     mainCategory: categories[0],
     categories: categories,
+    readCount: 1,
   }).then( () => {
     alert("Thêm mới sách thành công");
   }).catch((error) => {
